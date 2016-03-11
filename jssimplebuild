@@ -2,12 +2,11 @@
 
 scriptname=$1
 
-echo "" > ~/Public/jssimplebuild/include.js
+rm -f ~/Public/jssimplebuild/include.js
 echo "" > ~/Public/jssimplebuild/include_underscore.js
 echo "" > ~/Public/jssimplebuild/include_jquery.js
 
-cat $scriptname > ~/Public/jssimplebuild/include.js
-scriptnumber=""
+ln -s $scriptname ~/Public/jssimplebuild/include.js
 
 while test $# -gt 0
 do
@@ -19,18 +18,11 @@ do
       cp ~/Public/jssimplebuild/underscore.js ~/Public/jssimplebuild/include_underscore.js
       ;;
     *)
-#      if [[ $1 =~ ^[0-6]$ ]]; then
-#        cat $scriptname > ~/Public/jssimplebuild/include$1.js
-#        scriptnumber=$1
-#      fi
+      echo "Bad Peram"
       ;;
   esac
   shift
 done
-
-#if [[ -z "$scriptnumber" ]]; then
-#  cat $scriptname > ~/Public/jssimplebuild/include1.js
-#fi
 
 open -a "Google Chrome" ~/Public/jssimplebuild/index.html
 
