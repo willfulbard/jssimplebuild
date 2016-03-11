@@ -1,28 +1,12 @@
 #!/bin/bash
 
-array_contains () { 
-  local array=$1
-  local seeking=$2
-  local in=""
-  for element in "${!array}"; do
-    if [[ $element == $seeking ]]; then
-      in="found"
-      break
-    fi
-  done
-  return $in
-}
 scriptname=$1
 
-echo "" > ~/Public/jssimplebuild/include1.js
-echo "" > ~/Public/jssimplebuild/include2.js
-echo "" > ~/Public/jssimplebuild/include3.js
-echo "" > ~/Public/jssimplebuild/include4.js
-echo "" > ~/Public/jssimplebuild/include5.js
-echo "" > ~/Public/jssimplebuild/include6.js
+echo "" > ~/Public/jssimplebuild/include.js
 echo "" > ~/Public/jssimplebuild/include_underscore.js
 echo "" > ~/Public/jssimplebuild/include_jquery.js
 
+cat $scriptname > ~/Public/jssimplebuild/include.js
 scriptnumber=""
 
 while test $# -gt 0
@@ -35,18 +19,18 @@ do
       cp ~/Public/jssimplebuild/underscore.js ~/Public/jssimplebuild/include_underscore.js
       ;;
     *)
-      if [[ $1 =~ ^[0-6]$ ]]; then
-        cat $scriptname > ~/Public/jssimplebuild/include$1.js
-        scriptnumber=$1
-      fi
+#      if [[ $1 =~ ^[0-6]$ ]]; then
+#        cat $scriptname > ~/Public/jssimplebuild/include$1.js
+#        scriptnumber=$1
+#      fi
       ;;
   esac
   shift
 done
 
-if [[ -z "$scriptnumber" ]]; then
-  cat $scriptname > ~/Public/jssimplebuild/include1.js
-fi
+#if [[ -z "$scriptnumber" ]]; then
+#  cat $scriptname > ~/Public/jssimplebuild/include1.js
+#fi
 
 open ~/Public/jssimplebuild/index.html
 
