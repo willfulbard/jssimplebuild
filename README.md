@@ -7,5 +7,5 @@ A simple build system for testing small scripts in the browser.  This was writte
   1.  Copy: `cp jssimplebuild.sublime-build ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`
   3.  In Sublime: select jssimplebuild from `Tools -> Build System`
 3.  If using vim, add the lines in javascript.vim to your .vimrc or copy it into your `~/.vim/ftplugins/javascript.vim` file.
-4.  Enjoy using cmd-b or :make respectively! Since it creates a link to your file, you only need to build once then refreash the page after saving.
+4.  Enjoy using cmd-b or :make respectively! Since it creates a link to your file, you only need to build once then refresh the page after saving.
 
