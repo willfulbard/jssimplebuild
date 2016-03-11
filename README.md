@@ -1,5 +1,5 @@
 # jssimplebuild
-A simple build system for testing small scripts in the browser
+A simple build system for testing small scripts in the browser.  This was written for testing my course assessments, so it works best with simple, one-file scripts.  It can include JQuery or underscore if needed.
 
 ## Installation
 1.  `cd ~/Public` and run `git clone https://github.com/willfulbard/jssimplebuild.git`
