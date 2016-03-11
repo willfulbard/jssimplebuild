@@ -1,1 +1,1 @@
-set makeprg=jstest\ %:p\ $*
+set makeprg=~/Public/jssimplebuild/jssimplebuild\ %:p\ $*
