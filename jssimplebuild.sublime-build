@@ -1,0 +1,3 @@
+{
+  "cmd": ["~/Public/jssimplebuild/jssimplebuild", "${file}", "1", "underscore", "jquery" ]
+}
